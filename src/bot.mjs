@@ -15,6 +15,7 @@ const start = ctx =>
         reply_markup: new Keyboard().resized().requestChat('Выберите чат', 0, {
             user_administrator_rights: { can_change_info: true },
             bot_administrator_rights: { can_change_info: true },
+            chat_is_channel: true,
         }),
     })
 
