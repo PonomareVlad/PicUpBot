@@ -1,4 +1,4 @@
-import { Bot, InlineKeyboard, InputFile, Keyboard } from 'grammy'
+import { Bot, InputFile, Keyboard } from 'grammy'
 import { StatelessQuestion } from '@grammyjs/stateless-question'
 
 export const {
@@ -12,7 +12,7 @@ const safe = bot.errorBoundary(console.error)
 
 const start = ctx =>
     ctx.reply('В каком чате установить изображение ?', {
-        reply_markup: new Keyboard().requestChat('Выберите чат', 0, {
+        reply_markup: new Keyboard().resized().requestChat('Выберите чат', 0, {
             user_administrator_rights: { can_change_info: true },
             bot_administrator_rights: { can_change_info: true },
         }),
