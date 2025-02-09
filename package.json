@@ -10,6 +10,7 @@
         "start": "node --watch --env-file=.env scripts/start.mjs"
     },
     "dependencies": {
+        "@grammyjs/stateless-question": "^4.0.0",
         "grammy": "^1.17.1"
     }
 }
