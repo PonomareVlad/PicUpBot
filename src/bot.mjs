@@ -12,6 +12,7 @@ const safe = bot.errorBoundary(console.error)
 
 safe.use(
     session({
+        initial: () => ({}),
         storage: freeStorage(token),
     })
 )
