@@ -39,7 +39,9 @@ const chat = ctx => {
 }
 
 const picture = async ctx =>
-    await ctx.reply('Отправьте изображение как документ')
+    await ctx.reply('Отправьте изображение как документ', {
+        reply_markup: { remove_keyboard: true },
+    })
 
 const upload = async ctx => {
     try {
